@@ -1,15 +1,40 @@
 <div align='center'><h3><a>QBCore Inventory Redesigned by !miquelmq20</a></h3></div>
 <br>
-<div align='center'><img style="width: 30em;" src='https://user-images.githubusercontent.com/43810248/212482372-768d3b71-fe2d-4af5-b4d0-a98803b3e1d7.png'/></div>
+<div align='center'><img style="width: 30em;" src='https://user-images.githubusercontent.com/43810248/211297116-b0a67a97-64de-4627-a71c-04d7421418da.png'/></div>
 <br>
 
 # Framework
 
-It is a modified conversion of the QBCore scoreboard to ESX. I don't have much knowledge of how ESX works and I don't support the script.
+The inventory was worked with an old version of QBCore (2021). In case it doesn't work properly you can download the new [qb-inventory](https://github.com/qbcore-framework/qb-inventory) and replace the "html" directory.
+
+In order for clothing to work with the new QBCore inventory you will need to add this in the client.lua:
+
+```
+RegisterNUICallback("changeClothes", function(data)
+    ExecuteCommand(data.clothing)
+end)
+```
 
 # Dependencies
+A script containing the clothing commands in English.
 
-- es_extended
+- [qb-radialmenu](https://github.com/qbcore-framework/qb-radialmenu)
+- [dpclothing](https://github.com/andristum/dpclothing)
+
+# Features
+
+### Shops
+
+- Creates different shops for 24/7, Ammunation, Liquor Stores, Vending Machines, etc.
+- Job restricted items in shops.
+
+### Compatibility
+
+- It includes all the options from the QBCore inventory and some added by me.
+
+### Clothing
+
+- Clothing options on the inventory UI.
 
 # Support
-If you need help with this resource you can contact me via Discord (not support) : miquelmq20#9760
+If you need help with this resource you can contact me via Discord: miquelmq20#9760
