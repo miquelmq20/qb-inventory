@@ -1,11 +1,19 @@
 <div align='center'><h3><a>QBCore Inventory Redesigned by !miquelmq20</a></h3></div>
 <br>
-<div align='center'><img style="width: 30em;" src='https://github.com/miquelmq20/qb-inventory/assets/43810248/d0eb688d-af93-4346-a69c-dfdf5ac35efe'/></div>
+<div align='center'><img style="width: 30em;" src='https://user-images.githubusercontent.com/43810248/211297116-b0a67a97-64de-4627-a71c-04d7421418da.png'/></div>
 <br>
 
 # Framework
 
-(QBCore) If this version of the inventory doesn't work for you, replace the html of the new QBCore inventory
+The inventory was worked with an old version of QBCore (2021). In case it doesn't work properly you can download the new [qb-inventory](https://github.com/qbcore-framework/qb-inventory) and replace the "html" directory.
+
+In order for clothing to work with the new QBCore inventory you will need to add this in the client.lua:
+
+```
+RegisterNUICallback("changeClothes", function(data)
+    ExecuteCommand(data.clothing)
+end)
+```
 
 # Dependencies
 A script containing the clothing commands in English.
